@@ -22,6 +22,15 @@ class MyApp extends StatelessWidget {
       title: 'Mpesa UI',
       theme: ThemeData(
         primarySwatch: Colors.red,
+        tabBarTheme: TabBarTheme(
+          labelColor: Colors.black45,
+          labelStyle: TextStyle(color: Colors.black45), // color for text
+          indicator: UnderlineTabIndicator(
+            borderSide: BorderSide(width: 3.0, color: AppColors.primaryColor),
+          ),
+        ),
+        // primaryColor: Colors.pink[800], // outdated and has no effect to Tabbar
+        // accentColor: Colors.cyan[600] // deprecated,
       ),
       home: const MainScreen(),
     );
