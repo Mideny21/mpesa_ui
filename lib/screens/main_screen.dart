@@ -37,90 +37,43 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(index: _selectedIndex, children: _pages),
-      bottomNavigationBar: SizedBox(
-        height: 50,
-        child: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Container(
-                width: bottomBarWidth,
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(
-                      color: _selectedIndex == 0
-                          ? AppColors.primaryColor
-                          : Colors.transparent,
-                      width: bottomBarBorderWidth,
-                    ),
-                  ),
-                ),
-                child: const Icon(Icons.home_outlined),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                width: bottomBarWidth,
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(
-                      color: _selectedIndex == 1
-                          ? AppColors.primaryColor
-                          : Colors.transparent,
-                      width: bottomBarBorderWidth,
-                    ),
-                  ),
-                ),
-                child: const Icon(Icons.trending_up_rounded),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                  width: bottomBarWidth,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                        color: _selectedIndex == 2
-                            ? AppColors.primaryColor
-                            : Colors.transparent,
-                        width: bottomBarBorderWidth,
-                      ),
-                    ),
-                  ),
-                  child: const Icon(Icons.add)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                width: bottomBarWidth,
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(
-                      color: _selectedIndex == 3
-                          ? AppColors.primaryColor
-                          : Colors.transparent,
-                      width: bottomBarBorderWidth,
-                    ),
-                  ),
-                ),
-                child: const Icon(Icons.person_outline_outlined),
-              ),
-              label: '',
-            ),
-          ],
-          currentIndex: _selectedIndex, //New
-          onTap: _onItemTapped,
-          iconSize: 28,
-          selectedFontSize: 0.0,
-          unselectedFontSize: 0.0,
-          backgroundColor: Colors.grey[200],
-          // type: BottomNavigationBarType.fixed,
-          selectedItemColor: AppColors.primaryColor,
-          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
-          unselectedIconTheme: const IconThemeData(color: Colors.grey),
-          unselectedItemColor: Colors.grey,
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Nyumbani',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Muda wa maongezi',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Hamisha pesa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Huduma',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Mipangilio',
+          ),
+        ],
+        currentIndex: _selectedIndex, //New
+        onTap: _onItemTapped,
+        iconSize: 28,
+        selectedFontSize: 13.0,
+        unselectedFontSize: 12.0,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        unselectedLabelStyle: const TextStyle(color: Colors.black),
+        backgroundColor: Colors.grey[200],
+        // type: BottomNavigationBarType.fixed,
+        selectedItemColor: AppColors.primaryColor,
+        // selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+        unselectedIconTheme: const IconThemeData(color: Colors.black54),
+        unselectedItemColor: Colors.black,
       ),
     );
   }

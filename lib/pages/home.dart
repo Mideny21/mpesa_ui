@@ -3,6 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:mpesa_ui/data/home_data.dart';
 import 'package:mpesa_ui/utils/colors.dart';
 
+import '../components/gundua.dart';
+import '../components/toapesa.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -105,13 +108,10 @@ class _HomePageState extends State<HomePage> {
                 child: Material(
                   elevation: 5,
                   child: ListTile(
-                    leading: Icon(Icons.receipt),
-                    title: Text("Taarifa za Mpesa"),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios,
-                      color: AppColors.primaryColor,
-                    ),
-                  ),
+                      leading: Icon(Icons.receipt),
+                      title: Text("Taarifa za Mpesa"),
+                      trailing: Icon(Icons.arrow_forward_ios,
+                          color: AppColors.primaryColor)),
                 ))
           ],
         ),
@@ -121,36 +121,22 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: _appBar(AppBar().preferredSize.height),
       body: SafeArea(
-          child: ListView(
-        children: [
-          const SizedBox(height: 3),
-          SizedBox(
-            height: 118,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                itemCount: homedata1.length,
-                itemBuilder: ((context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.3,
-                      child: Card(
-                        elevation: 5,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Icon(homedata1[index]['icon']),
-                            Text(homedata1[index]['name'])
-                          ],
-                        ),
-                      ),
-                    ),
-                  );
-                })),
-          )
-        ],
+          child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: ListView(
+          children: const [
+            SizedBox(height: 3),
+            ToaPesaPanel(),
+            Text(
+              "Gundua",
+              style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0.8,
+                  fontSize: 18),
+            ),
+            GunduaPanel()
+          ],
+        ),
       )),
     );
   }
