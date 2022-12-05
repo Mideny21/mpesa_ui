@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../pages/home.dart';
 import '../pages/mudawamaongezi.dart';
+import '../pages/tile_screen.dart';
 import '../utils/colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -29,6 +30,8 @@ class _MainScreenState extends State<MainScreen> {
     _pages = [
       const HomePage(),
       const MudaWaMaongeziScreen(),
+      const TileScreen()
+
       // const ViewCrops(),
       // const AddProduct(),
       // const AccountPage(),

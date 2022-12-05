@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mpesa_ui/utils/colors.dart';
 
+import 'ongeza_salio.dart';
+
 class MudaWaMaongeziScreen extends StatefulWidget {
   const MudaWaMaongeziScreen({super.key});
 
@@ -12,10 +14,10 @@ class _MudaWaMaongeziScreenState extends State<MudaWaMaongeziScreen> {
   TabBar get _tabBar => TabBar(
         tabs: [
           Tab(
-            text: "Ongeaz salio mara moja",
+            text: "Ongeza salio mara moja",
           ),
           Tab(
-            text: "Bando  ",
+            text: "Bando",
           ),
         ],
       );
@@ -36,9 +38,7 @@ class _MudaWaMaongeziScreenState extends State<MudaWaMaongeziScreen> {
         ),
         body: const TabBarView(
           children: [
-            Center(
-              child: Text("It's cloudy here"),
-            ),
+            OngezaSalioScreen(),
             Center(
               child: Text("It's rainy here"),
             ),
