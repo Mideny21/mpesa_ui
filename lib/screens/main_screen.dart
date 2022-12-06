@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../pages/home.dart';
-import '../pages/mudawamaongezi.dart';
-import '../pages/tile_screen.dart';
+import 'home.dart';
+import 'muda_maongezi.dart';
+import 'hamisha_pesa.dart';
 import '../utils/colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -30,7 +30,7 @@ class _MainScreenState extends State<MainScreen> {
     _pages = [
       const HomePage(),
       const MudaWaMaongeziScreen(),
-      const TileScreen()
+      const HamishaPesaScreen()
 
       // const ViewCrops(),
       // const AddProduct(),
@@ -57,11 +57,11 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Hamisha pesa',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.storefront),
             label: 'Huduma',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.settings),
             label: 'Mipangilio',
           ),
         ],

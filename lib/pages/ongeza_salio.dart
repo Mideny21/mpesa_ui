@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../utils/colors.dart';
 import '../widgets/custom_button.dart';
 
-class OngezaSalioScreen extends StatefulWidget {
-  const OngezaSalioScreen({super.key});
+class TumePesaScreen extends StatefulWidget {
+  const TumePesaScreen({super.key});
 
   @override
-  State<OngezaSalioScreen> createState() => _OngezaSalioScreenState();
+  State<TumePesaScreen> createState() => _TumePesaScreenState();
 }
 
-class _OngezaSalioScreenState extends State<OngezaSalioScreen> {
+class _TumePesaScreenState extends State<TumePesaScreen> {
   final priceController = TextEditingController();
   final phoneController = TextEditingController();
   late int tappedIndex;
@@ -45,11 +45,11 @@ class _OngezaSalioScreenState extends State<OngezaSalioScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(15.0),
       child: SizedBox(
         height: 120,
         child: Card(
-            elevation: 5,
+            elevation: 8,
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Stack(
@@ -62,7 +62,7 @@ class _OngezaSalioScreenState extends State<OngezaSalioScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Enter your number"),
+                        const Text("Namba yangu"),
                         const SizedBox(height: 5),
                         Row(
                           children: [
@@ -111,7 +111,7 @@ class _OngezaSalioScreenState extends State<OngezaSalioScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Enter your number"),
+                        const Text("Kiasi"),
                         const SizedBox(height: 5),
                         Container(
                             decoration: BoxDecoration(
@@ -138,50 +138,43 @@ class _OngezaSalioScreenState extends State<OngezaSalioScreen> {
                     top: 165,
                     right: 0,
                     left: 0,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text("Ingiza salio"),
-                        SizedBox(
-                          height: 80,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            itemCount: price.length,
-                            itemBuilder: ((context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: InkWell(
-                                    onTap: () {
-                                      String selectedElement =
-                                          price.elementAt(index)['value'];
-                                      setValue(selectedElement);
-                                      setState(() {
-                                        tappedIndex = index;
-                                      });
-                                    },
-                                    child: Container(
-                                        width: 68,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                            border: Border.all(
-                                                color: tappedIndex == index
-                                                    ? AppColors.primaryColor
-                                                    : Colors.grey,
-                                                width: 2)),
-                                        child: Center(
-                                          child: Text(price[index]['value'],
-                                              style: const TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w400),
-                                              textAlign: TextAlign.center),
-                                        ))),
-                              );
-                            }),
-                          ),
-                        ),
-                      ],
+                    child: SizedBox(
+                      height: 80,
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: price.length,
+                        itemBuilder: ((context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: InkWell(
+                                onTap: () {
+                                  String selectedElement =
+                                      price.elementAt(index)['value'];
+                                  setValue(selectedElement);
+                                  setState(() {
+                                    tappedIndex = index;
+                                  });
+                                },
+                                child: Container(
+                                    width: 68,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(
+                                            color: tappedIndex == index
+                                                ? AppColors.primaryColor
+                                                : Colors.grey,
+                                            width: 2)),
+                                    child: Center(
+                                      child: Text(price[index]['value'],
+                                          style: const TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w400),
+                                          textAlign: TextAlign.center),
+                                    ))),
+                          );
+                        }),
+                      ),
                     ),
                   ),
                   // const SizedBox(height: 200),

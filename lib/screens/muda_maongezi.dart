@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mpesa_ui/utils/colors.dart';
 
-import 'ongeza_salio.dart';
+import '../pages/nunua_bando.dart';
+import '../pages/ongeza_salio.dart';
 
 class MudaWaMaongeziScreen extends StatefulWidget {
   const MudaWaMaongeziScreen({super.key});
@@ -11,20 +12,16 @@ class MudaWaMaongeziScreen extends StatefulWidget {
 }
 
 class _MudaWaMaongeziScreenState extends State<MudaWaMaongeziScreen> {
-  TabBar get _tabBar => TabBar(
+  TabBar get _tabBar => const TabBar(
         tabs: [
-          Tab(
-            text: "Ongeza salio mara moja",
-          ),
-          Tab(
-            text: "Bando",
-          ),
+          Tab(text: "Ongeza salio mara moja"),
+          Tab(text: "Bando"),
         ],
       );
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+      initialIndex: 0,
       length: 2,
       child: Scaffold(
         appBar: AppBar(
@@ -37,12 +34,7 @@ class _MudaWaMaongeziScreenState extends State<MudaWaMaongeziScreen> {
           ),
         ),
         body: const TabBarView(
-          children: [
-            OngezaSalioScreen(),
-            Center(
-              child: Text("It's rainy here"),
-            ),
-          ],
+          children: [TumePesaScreen(), NunuaBandoScreen()],
         ),
       ),
     );

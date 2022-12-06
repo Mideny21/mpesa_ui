@@ -3,29 +3,32 @@ import 'package:mpesa_ui/data/home_data.dart';
 
 import '../utils/colors.dart';
 
-class TileScreen extends StatefulWidget {
-  const TileScreen({super.key});
+class HamishaPesaScreen extends StatefulWidget {
+  const HamishaPesaScreen({super.key});
 
   @override
-  State<TileScreen> createState() => _TileScreenState();
+  State<HamishaPesaScreen> createState() => _HamishaPesaScreenState();
 }
 
-class _TileScreenState extends State<TileScreen> {
+class _HamishaPesaScreenState extends State<HamishaPesaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.primaryColor,
         centerTitle: true,
-        title: const Text("Temporary tile Screen"),
+        title: const Text("Hamisha Pesa"),
       ),
       body: ListView.builder(
-          itemCount: tiledata1.length,
+          itemExtent: 80.0,
+          itemCount: hamishapesadata.length,
           itemBuilder: ((context, index) {
             return ListTile(
-              leading:
-                  Icon(tiledata1[index]['icon'], color: AppColors.primaryColor),
-              title: Text(tiledata1[index]['name']),
+              leading: Icon(hamishapesadata[index]['icon'], color: Colors.grey),
+              title: Text(
+                hamishapesadata[index]['name'],
+                style: TextStyle(fontSize: 20),
+              ),
               trailing: const Icon(Icons.arrow_forward_ios,
                   color: AppColors.primaryColor),
             );
