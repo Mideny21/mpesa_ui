@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home.dart';
+import 'huduma.dart';
 import 'muda_maongezi.dart';
 import 'hamisha_pesa.dart';
 import '../utils/colors.dart';
@@ -30,7 +31,8 @@ class _MainScreenState extends State<MainScreen> {
     _pages = [
       const HomePage(),
       const MudaWaMaongeziScreen(),
-      const HamishaPesaScreen()
+      const HamishaPesaScreen(),
+      const HudumaScreen()
 
       // const ViewCrops(),
       // const AddProduct(),
