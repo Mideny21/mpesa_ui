@@ -36,40 +36,47 @@ class _HudumaScreenState extends State<HudumaScreen>
             border: Border.all(color: Colors.white38)),
         tabs: [
           HudumaTabs(
+              iconColor: _activeIndex == 0 ? Colors.white : Colors.grey,
               boxColor:
                   _activeIndex == 0 ? AppColors.primaryColor : Colors.white,
               textColor: _activeIndex == 0 ? Colors.white : Colors.grey,
-              color: _activeIndex == 0 ? Colors.white : Colors.grey,
-              icon: Icons.read_more,
-              title: "Investments"),
+              color: _activeIndex == 0 ? Colors.transparent : Colors.grey,
+              icon: Icons.all_inbox,
+              title: "Huduma zote"),
           HudumaTabs(
+              iconColor: _activeIndex == 1 ? Colors.white : Colors.grey,
               boxColor:
                   _activeIndex == 1 ? AppColors.primaryColor : Colors.white,
               textColor: _activeIndex == 1 ? Colors.white : Colors.grey,
-              color: _activeIndex == 1 ? Colors.white : Colors.grey,
+              color: _activeIndex == 1 ? Colors.transparent : Colors.grey,
               icon: Icons.read_more,
-              title: "Investments"),
+              // some sort of hand begging for help
+              title: "Mikopo na Akiba"),
           HudumaTabs(
+              iconColor: _activeIndex == 2 ? Colors.white : Colors.grey,
               boxColor:
                   _activeIndex == 2 ? AppColors.primaryColor : Colors.white,
               textColor: _activeIndex == 2 ? Colors.white : Colors.grey,
-              color: _activeIndex == 2 ? Colors.white : Colors.grey,
-              icon: Icons.read_more,
-              title: "Investments"),
+              color: _activeIndex == 2 ? Colors.transparent : Colors.grey,
+              icon: Icons.food_bank_outlined,
+              //bank icon
+              title: "Huduma za Kifedha"),
           HudumaTabs(
+              iconColor: _activeIndex == 3 ? Colors.white : Colors.grey,
               boxColor:
                   _activeIndex == 3 ? AppColors.primaryColor : Colors.white,
               textColor: _activeIndex == 3 ? Colors.white : Colors.grey,
-              color: _activeIndex == 3 ? Colors.white : Colors.grey,
-              icon: Icons.read_more,
-              title: "Investments"),
+              color: _activeIndex == 3 ? Colors.transparent : Colors.grey,
+              icon: Icons.water_drop_outlined,
+              title: "Matumizi"),
           HudumaTabs(
+              iconColor: _activeIndex == 4 ? Colors.white : Colors.grey,
               boxColor:
                   _activeIndex == 4 ? AppColors.primaryColor : Colors.white,
               textColor: _activeIndex == 4 ? Colors.white : Colors.grey,
-              color: _activeIndex == 4 ? Colors.white : Colors.grey,
-              icon: Icons.read_more,
-              title: "Investments"),
+              color: _activeIndex == 4 ? Colors.transparent : Colors.grey,
+              icon: Icons.games,
+              title: "Burudani"),
         ],
       );
   @override
@@ -113,14 +120,16 @@ class HudumaTabs extends StatelessWidget {
   final Color color;
   final IconData icon;
   final Color boxColor;
+  final Color iconColor;
   final Color textColor;
 
   const HudumaTabs({
     Key? key,
     required this.title,
-    required this.icon,
     required this.color,
+    required this.icon,
     required this.boxColor,
+    required this.iconColor,
     required this.textColor,
   }) : super(key: key);
 
@@ -137,7 +146,7 @@ class HudumaTabs extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Icon(icon, size: 18),
+                  Icon(icon, size: 18, color: iconColor),
                   const SizedBox(width: 5),
                   Text(
                     title,
