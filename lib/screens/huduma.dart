@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import '../pages/huduma_zote.dart';
 import '../utils/colors.dart';
 
 class HudumaScreen extends StatefulWidget {
@@ -101,14 +102,17 @@ class _HudumaScreenState extends State<HudumaScreen>
             child: ColoredBox(color: Colors.white, child: _tabBar),
           ),
         ),
-        body: TabBarView(
-          children: [
-            Container(),
-            Container(),
-            Container(),
-            Container(),
-            Container(),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          child: TabBarView(
+            children: [
+              const HudumaZote(),
+              Container(),
+              Container(),
+              Container(),
+              Container(),
+            ],
+          ),
         ),
       ),
     );

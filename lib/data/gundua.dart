@@ -17,3 +17,26 @@ List<Map> gunduaData = [
     "image": "assets/images/future.jpeg"
   },
 ];
+
+List<Map> hudumaZote1 = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg"
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png"
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg"
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg"
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg"
+  },
+];

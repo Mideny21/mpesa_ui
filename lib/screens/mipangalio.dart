@@ -16,10 +16,9 @@ class _MipangilioScreenState extends State<MipangilioScreen> {
     return Scaffold(
       backgroundColor: Colors.white30,
       appBar: AppBar(
-        backgroundColor: AppColors.primaryColor,
-        centerTitle: true,
-        title: const Text("Mipangilio"),
-      ),
+          backgroundColor: AppColors.primaryColor,
+          centerTitle: true,
+          title: const Text("Mipangilio")),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: ListView(
