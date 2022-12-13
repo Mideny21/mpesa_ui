@@ -21,22 +21,94 @@ List<Map> gunduaData = [
 List<Map> hudumaZote1 = [
   {
     "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg"
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
   },
   {
     "image": "assets/images/uhuru na umoja.jpeg",
-    "secondary": "assets/images/gepg.png"
+    "secondary": "assets/images/gepg.png",
+    "name": "M-Pawa"
   },
   {
     "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg"
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
   },
   {
     "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg"
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
   },
   {
     "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg"
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
+  },
+];
+
+List<Map> hudumaZote2 = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png",
+    "name": "M-Pawa"
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
+  },
+];
+
+List<Map> hudumaZote3 = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png",
+    "name": "M-Pawa"
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
+  },
+];
+
+List<Map> hudumaZote4 = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
+  },
+];
+
+List<Map> hudumaZote5 = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png",
+    "name": "M-Pawa"
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pawa"
   },
 ];

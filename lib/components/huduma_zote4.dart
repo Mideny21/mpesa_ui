@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../data/gundua.dart';
 
-class GHudumaZotePanel extends StatelessWidget {
-  const GHudumaZotePanel({super.key});
+class GHudumaZotePanel4 extends StatelessWidget {
+  const GHudumaZotePanel4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class GHudumaZotePanel extends StatelessWidget {
           crossAxisCount: (orientation == Orientation.portrait) ? 3 : 3),
       shrinkWrap: true,
       physics: const ScrollPhysics(),
-      itemCount: hudumaZote1.length,
+      itemCount: hudumaZote4.length,
       itemBuilder: ((context, index) {
         return Padding(
           padding: const EdgeInsets.all(8.0),
@@ -27,7 +27,7 @@ class GHudumaZotePanel extends StatelessWidget {
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                        image: ExactAssetImage(hudumaZote1[index]['secondary']),
+                        image: ExactAssetImage(hudumaZote4[index]['secondary']),
                         fit: BoxFit.fill)),
               ),
               const SizedBox(height: 5),

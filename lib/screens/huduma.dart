@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import '../components/gridViewHudumaZote.dart';
+import '../components/huduma_zote2.dart';
+import '../components/huduma_zote3.dart';
+import '../components/huduma_zote4.dart';
+import '../components/huduma_zote5.dart';
 import '../pages/huduma_zote.dart';
 import '../utils/colors.dart';
 
@@ -44,7 +48,7 @@ class _HudumaScreenState extends State<HudumaScreen>
                   _activeIndex == 1 ? AppColors.primaryColor : Colors.white,
               textColor: _activeIndex == 1 ? Colors.white : Colors.grey,
               color: _activeIndex == 1 ? Colors.transparent : Colors.grey,
-              icon: Icons.read_more,
+              icon: Icons.handshake_outlined,
               // some sort of hand begging for help
               title: "Mikopo na Akiba"),
           HudumaTabs(
@@ -53,8 +57,7 @@ class _HudumaScreenState extends State<HudumaScreen>
                   _activeIndex == 2 ? AppColors.primaryColor : Colors.white,
               textColor: _activeIndex == 2 ? Colors.white : Colors.grey,
               color: _activeIndex == 2 ? Colors.transparent : Colors.grey,
-              icon: Icons.food_bank_outlined,
-              //bank icon
+              icon: Icons.account_balance,
               title: "Huduma za Kifedha"),
           HudumaTabs(
               iconColor: _activeIndex == 3 ? Colors.white : Colors.grey,
@@ -115,12 +118,12 @@ class _HudumaScreenState extends State<HudumaScreen>
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: TabBarView(
             controller: _tabController,
-            children: [
-              const HudumaZote(),
-              Container(),
-              Container(),
-              Container(),
-              Container(),
+            children: const [
+              HudumaZote(),
+              GHudumaZotePanel2(),
+              GHudumaZotePanel3(),
+              GHudumaZotePanel4(),
+              GHudumaZotePanel5(),
             ],
           ),
         ),
