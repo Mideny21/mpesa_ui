@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import '../components/gridViewHudumaZote.dart';
 import '../pages/huduma_zote.dart';
 import '../utils/colors.dart';
 
@@ -16,22 +17,15 @@ class _HudumaScreenState extends State<HudumaScreen>
   TabController? _tabController;
   int _activeIndex = 0;
 
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(vsync: this, length: 5);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _tabController!.dispose();
-  }
-
   TabBar get _tabBar => TabBar(
         controller: _tabController,
         isScrollable: true,
         indicatorColor: Colors.transparent,
+        onTap: (tabIndex) {
+          setState(() {
+            _activeIndex = tabIndex;
+          });
+        },
         indicator: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Colors.white38)),
@@ -80,17 +74,32 @@ class _HudumaScreenState extends State<HudumaScreen>
               title: "Burudani"),
         ],
       );
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController =
+        TabController(vsync: this, length: 5, initialIndex: _activeIndex);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tabController!.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     _tabController!.addListener(() {
       if (_tabController!.indexIsChanging) {
         setState(() {
           _activeIndex = _tabController!.index;
+          // _tabController.animateTo(value);
         });
       }
     });
     return DefaultTabController(
-      initialIndex: 0,
+      initialIndex: _activeIndex,
       length: 5,
       child: Scaffold(
         appBar: AppBar(
@@ -105,6 +114,7 @@ class _HudumaScreenState extends State<HudumaScreen>
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: TabBarView(
+            controller: _tabController,
             children: [
               const HudumaZote(),
               Container(),

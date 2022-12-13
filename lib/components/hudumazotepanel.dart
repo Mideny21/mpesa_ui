@@ -36,16 +36,16 @@ class HudumaZotePanel extends StatelessWidget {
                 Positioned(
                   top: 10,
                   left: 10,
-                  child: ClipOval(
-                    child: Container(
-                      height: 38,
-                      width: 38,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                        image: ExactAssetImage(hudumaZote1[index]['secondary']),
-                        fit: BoxFit.fill,
-                      )),
-                    ),
+                  child: Container(
+                    height: 38,
+                    width: 38,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image:
+                              ExactAssetImage(hudumaZote1[index]['secondary']),
+                          fit: BoxFit.fill,
+                        )),
                   ),
                 )
               ]),

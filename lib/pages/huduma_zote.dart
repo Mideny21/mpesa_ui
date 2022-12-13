@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/gridViewHudumaZote.dart';
 import '../components/hudumazotepanel.dart';
 
 class HudumaZote extends StatefulWidget {
@@ -24,6 +25,7 @@ class _HudumaZoteState extends State<HudumaZote> {
             style: TextStyle(
                 fontWeight: FontWeight.w500, letterSpacing: 0.8, fontSize: 18),
           ),
+          GHudumaZotePanel()
         ],
       ),
     );
