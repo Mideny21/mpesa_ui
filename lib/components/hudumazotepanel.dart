@@ -12,7 +12,7 @@ class HudumaZotePanel extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
-        itemCount: hudumaZote1.length,
+        itemCount: hudumaZote.take(4).length,
         itemBuilder: ((context, index) {
           return Padding(
             padding: const EdgeInsets.all(3.0),
@@ -27,9 +27,9 @@ class HudumaZotePanel extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           image: DecorationImage(
-                            image: ExactAssetImage(hudumaZote1[index]['image']),
-                            fit: BoxFit.fill,
-                          )),
+                              image:
+                                  ExactAssetImage(hudumaZote[index]['image']),
+                              fit: BoxFit.cover)),
                     ),
                   ),
                 ),
@@ -43,7 +43,7 @@ class HudumaZotePanel extends StatelessWidget {
                         shape: BoxShape.circle,
                         image: DecorationImage(
                           image:
-                              ExactAssetImage(hudumaZote1[index]['secondary']),
+                              ExactAssetImage(hudumaZote[index]['secondary']),
                           fit: BoxFit.fill,
                         )),
                   ),

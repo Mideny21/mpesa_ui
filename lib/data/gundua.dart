@@ -18,10 +18,38 @@ List<Map> gunduaData = [
   },
 ];
 
-List<Map> hudumaZote1 = [
+List<Map> hudumaZote = [
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "Dstv"
+  },
+  {
+    "image": "assets/images/uhuru na umoja.jpeg",
+    "secondary": "assets/images/gepg.png",
+    "name": "GePG"
+  },
+  {
+    "image": "assets/images/mastaa shangwe.jpeg",
+    "secondary": "assets/images/captain.jpeg",
+    "name": "International"
+  },
+  {
+    "image": "assets/images/vodabima.jpeg",
+    "secondary": "assets/images/mpwa.png",
+    "name": "M-Pawa"
+  },
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/dstvlogo.jpeg",
+    "name": "M-Pesa Visa"
+  },
+];
+
+List<Map> mikopo = [
+  {
+    "image": "assets/images/dstv.jpeg",
+    "secondary": "assets/images/mpwa.png",
     "name": "M-Pawa"
   },
   {
@@ -34,19 +62,9 @@ List<Map> hudumaZote1 = [
     "secondary": "assets/images/dstvlogo.jpeg",
     "name": "M-Pawa"
   },
-  {
-    "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
-  },
-  {
-    "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
-  },
 ];
 
-List<Map> hudumaZote2 = [
+List<Map> hudumaZakifedha = [
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
@@ -55,60 +73,32 @@ List<Map> hudumaZote2 = [
   {
     "image": "assets/images/uhuru na umoja.jpeg",
     "secondary": "assets/images/gepg.png",
-    "name": "M-Pawa"
+    "name": "M-godi"
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
+    "name": "Songesha"
   },
 ];
 
-List<Map> hudumaZote3 = [
+List<Map> matumizi = [
   {
     "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
-  },
-  {
-    "image": "assets/images/uhuru na umoja.jpeg",
     "secondary": "assets/images/gepg.png",
-    "name": "M-Pawa"
+    "name": "GePG"
   },
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
-  },
-  {
-    "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
+    "name": "Malipo"
   },
 ];
 
-List<Map> hudumaZote4 = [
+List<Map> burudani = [
   {
     "image": "assets/images/dstv.jpeg",
     "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
-  },
-];
-
-List<Map> hudumaZote5 = [
-  {
-    "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
-  },
-  {
-    "image": "assets/images/uhuru na umoja.jpeg",
-    "secondary": "assets/images/gepg.png",
-    "name": "M-Pawa"
-  },
-  {
-    "image": "assets/images/dstv.jpeg",
-    "secondary": "assets/images/dstvlogo.jpeg",
-    "name": "M-Pawa"
+    "name": "Dstv"
   },
 ];

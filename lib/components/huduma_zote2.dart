@@ -16,7 +16,7 @@ class GHudumaZotePanel2 extends StatelessWidget {
           crossAxisCount: (orientation == Orientation.portrait) ? 3 : 3),
       shrinkWrap: true,
       physics: const ScrollPhysics(),
-      itemCount: hudumaZote2.length,
+      itemCount: mikopo.length,
       itemBuilder: ((context, index) {
         return Padding(
           padding: const EdgeInsets.all(8.0),
@@ -27,12 +27,12 @@ class GHudumaZotePanel2 extends StatelessWidget {
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                        image: ExactAssetImage(hudumaZote2[index]['secondary']),
-                        fit: BoxFit.fill)),
+                        image: ExactAssetImage(mikopo[index]['secondary']),
+                        fit: BoxFit.cover)),
               ),
               const SizedBox(height: 5),
-              const Text(
-                "M-Pawa",
+              Text(
+                mikopo[index]['name'],
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     letterSpacing: 0.5,
