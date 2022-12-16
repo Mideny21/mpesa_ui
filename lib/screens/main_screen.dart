@@ -53,11 +53,11 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Nyumbani',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.money_outlined),
             label: 'Muda wa maongezi',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.payments_outlined),
             label: 'Hamisha pesa',
           ),
           BottomNavigationBarItem(
